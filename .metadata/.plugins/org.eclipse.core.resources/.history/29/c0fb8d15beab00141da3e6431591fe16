@@ -1,0 +1,5 @@
+package course.labs.todomanager;
+
+public class ViewHolder {
+
+}

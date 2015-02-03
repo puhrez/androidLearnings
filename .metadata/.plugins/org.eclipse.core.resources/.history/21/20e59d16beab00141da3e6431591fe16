@@ -1,0 +1,9 @@
+package course.labs.todomanager;
+
+static class ViewHolder {
+	TextView priorityView;
+	TextView dateView;
+	CheckBox statusView;
+	TextView titleView;
+	RelativeLayout relativeLayout;
+}
