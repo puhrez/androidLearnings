@@ -82,16 +82,6 @@ public class ToDoItem {
 	public Date getDate() {
 		return mDate;
 	}
-	public boolean isDone() {
-		return mStatus == Status.DONE;
-	}
-	public void toggleStatus(boolean done) {
-		if (done) {
-			mStatus = Status.DONE;
-		} else {
-			mStatus = Status.NOTDONE;
-		}
-	}
 
 	public void setDate(Date date) {
 		mDate = date;

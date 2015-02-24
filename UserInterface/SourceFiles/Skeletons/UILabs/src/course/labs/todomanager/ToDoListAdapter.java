@@ -98,7 +98,7 @@ public class ToDoListAdapter extends BaseAdapter {
 		// TODO - Inflate the View for this ToDoItem
 		// from todo_item.xml
 		if (convertView == null) {
-			LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);;
+			LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = inflater.inflate(R.layout.todo_item, parent, false);
 			holder = new ViewHolder();
 			
@@ -122,7 +122,12 @@ public class ToDoListAdapter extends BaseAdapter {
 	
 					// TODO - set up an OnCheckedChangeListener, which
 					// is called when the user toggles the status checkbox
-					toDoItem.toggleStatus(isChecked);
+					//toDoItem.toggleStatus(isChecked);
+					if (toDoItem.getStatus() == ToDoItem.Status.DONE) {
+						toDoItem.setStatus(ToDoItem.Status.NOTDONE);
+					} else {
+						toDoItem.setStatus(ToDoItem.Status.DONE);
+					}
 				}
 			});
 			
@@ -140,7 +145,7 @@ public class ToDoListAdapter extends BaseAdapter {
 		}
 		if (toDoItem != null) {
 			holder.titleView.setText(toDoItem.getTitle());
-			holder.statusView.setChecked(toDoItem.isDone());;
+			holder.statusView.setChecked(toDoItem.getStatus() == ToDoItem.Status.DONE);;
 			holder.priorityView.setText(toDoItem.getPriority().toString());
 			holder.dateView.setText(ToDoItem.FORMAT.format(toDoItem.getDate()).toString());
 		}
