@@ -68,11 +68,6 @@ public class DownloaderTaskFragment extends Fragment {
 		mCallback = null;
 	}
 
-	// TODO: Implement an AsyncTask subclass called DownLoaderTask.
-	// This class must use the downloadTweets method (currently commented
-	// out). Ultimately, it must also pass newly available data back to 
-	// the hosting Activity using the DownloadFinishedListener interface.
-
    public class DownloaderTask extends AsyncTask<Integer, Integer, String[] > {
 	   @Override
 	   protected String[] doInBackground(Integer... ids) {

@@ -1,4 +1,5 @@
 appcompat_v7/
+bin/
 *.class
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
